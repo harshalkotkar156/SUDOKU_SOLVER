@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <title>Document</title>
+</head>
+<body class="flex flex-col items-center h-screen justify-center min-h-[400px]  bg-[url('bg.jpg')] ">
+    
+    <div id="name " class="w-[400px] text-center pt-1 mb-3 h-12 bg-white rounded-md " ><h1 class="font-extrabold text-4xl text-red-600 font-mono hover:text-red-700 transition-all duration-200
+         ">Sudoku Solver</h1>
+    </div>
+
+
+    <div class="refresh h-10 w-10 items-center flex justify-center bg-white rounded-full mb-1 hover:bg-slate-200 hover:scale-105 transition-all duration-200"><button id="refreshButton"> <i class="fa-solid fa-arrows-rotate scale-125"></i> </button></div>
+    
+    
+    
+    <div id="outer" class="drop-shadow-md  hover:drop-shadow-xl bg-gradient-to-r from-cyan-500 to-blue-500 border  rounded-md overflow-auto flex flex-col justify-center  mx-auto max-w-[600px] h-[500px] w-[600px] min-h-[400px] items-center">
+        
+        <!-- row1 -->
+        <div class="row">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> 
+            
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>
+
+        <!-- row2 -->
+        <div class="row">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>       
+        <!-- row3 -->
+        <div class="row">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>         
+
+        <!-- row4 -->
+        <div class="row mt-4">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>
+
+        <!-- row5 -->
+        <div class="row">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>
+
+        <!-- row6 -->
+        <div class="row">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>
+        
+<!-- row7 -->
+        <div class="row mt-4">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>
+<!-- row8 -->
+        <div class="row">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>
+
+        <!-- row9 -->
+        <div class="row">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+            <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip  h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip mr-4 h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white"> <input type="text" value="0" class="ip h-10 bg-slate-400 w-10 border rounded-md text-center font-semibold size-9 hover:bg-slate-500 transition-all duration-200 text-white">
+        </div>        
+
+    </div>
+    <button onclick="solve();" class="h-[30px] w-[100px]  bg-slate-200 mt-6 rounded-md font-semibold hover:bg-slate-300 transition-all duration-200">Solution</button>
+
+    <div class="invalid h-10 items-center w-40 justify-center  rounded-md font-mono mt-4 relative  flex  font-bold bg-red-500 text-white">INVALID SUDOKU!</div>
+
+
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
